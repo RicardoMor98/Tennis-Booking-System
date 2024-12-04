@@ -27,10 +27,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)73o&lw!n97h=686#%ur8)pcz0$$kbn4hjz(*d2&80#c9inbqe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-ricardomor9-tennisbooki-wuf0zlu8p3j.ws-eu117.gitpod.io',
-                '.herokuapp.com']
+                '.herokuapp.com',
+                '127.0.0.1',
+                'localhost'
+                ]
 
 
 # Application definition
@@ -89,6 +92,13 @@ WSGI_APPLICATION = 'tennisbookingsystem.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-ricardomor9-tennisbooki-wuf0zlu8p3j.ws-eu117.gitpod.io",
+    "https://ricardomor9-tennisbooki-26wa1mksmfo.ws.codeinstitute-ide.net/",
+    "https://ricardomor9-tennisbooki-wuf0zlu8p3j.ws-eu117.gitpod.io/",
+    "https://tennisbookingsystem-4a3213ced033.herokuapp.com/",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
