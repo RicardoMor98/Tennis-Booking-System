@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)73o&lw!n97h=686#%ur8)pcz0$$kbn4hjz(*d2&80#c9inbqe'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-ricardomor9-tennisbooki-wuf0zlu8p3j.ws-eu117.gitpod.io',
+ALLOWED_HOSTS = ['8000-ricardomor9-tennisbooki-9rhe8b7ed9r.ws-eu117.gitpod.io',
                 '.herokuapp.com',
                 '127.0.0.1',
                 'localhost'
@@ -94,7 +94,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-ricardomor9-tennisbooki-wuf0zlu8p3j.ws-eu117.gitpod.io",
+    "https://8000-ricardomor9-tennisbooki-9rhe8b7ed9r.ws-eu117.gitpod.io",
     "https://ricardomor9-tennisbooki-26wa1mksmfo.ws.codeinstitute-ide.net/",
     "https://ricardomor9-tennisbooki-wuf0zlu8p3j.ws-eu117.gitpod.io/",
     "https://tennisbookingsystem-4a3213ced033.herokuapp.com/",
