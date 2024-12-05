@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}My Bookings{% endblock %}
+
+{% block content %}
+<h1>Your Bookings</h1>
+{% if bookings %}
+    <ul>
+        {% for booking in bookings %}
+            <li>
+                {{ booking.court.name }} - {{ booking.date }} 
+                <form method="POST" action="{% url 'cancel_booking' booking.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Cancel</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>You have no bookings.</p>
+{% endif %}
+{% endblock %}
