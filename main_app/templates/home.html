@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Available Tennis Courts</h1>
+<ul>
+    {% for court in courts %}
+        <li>
+            <a href="{% url 'court_detail' court.id %}">{{ court.name }}</a> - 
+            Capacity: {{ court.capacity }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
