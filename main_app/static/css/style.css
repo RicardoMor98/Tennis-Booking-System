@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+
+/* Navbar background and link text color */
+.navbar {
+    background-color: #007bff; /* Blue background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.navbar-brand {
+    color: white; /* White text for brand name */
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #d9d9d9; /* Slightly lighter color on hover */
+}
+
+/* Navbar links default styles */
+.nav-link {
+    color: white; /* White text for links */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Link hover and active styles */
+.nav-link:hover,
+.nav-link:focus {
+    color: black; /* Black text on hover */
+    background-color: white; /* White box effect */
+    border-radius: 5px; /* Rounded corners for the box */
+    padding: 5px 10px; /* Extra padding for better aesthetics */
+}
+
+/* Active link styling (if a page is currently active) */
+.nav-item.active .nav-link {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* Navbar toggler button (for mobile view) */
+.navbar-toggler {
+    border: 1px solid white; /* White border */
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Responsive navbar adjustments for mobile */
+@media (max-width: 575.98px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
