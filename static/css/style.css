@@ -3,8 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    background-color: aqua;
   }
-
 
 /* Navbar background and link text color */
 .navbar {
@@ -60,3 +60,4 @@
         text-align: center;
     }
 }
+
