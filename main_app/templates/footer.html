@@ -1,22 +1,53 @@
 <footer>
-    <div class="footer-content">
-        <p>&copy; {{ current_year }} Tennis Booking System. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'my_bookings' %}">My Bookings</a>
-            <a href="{% url 'signup' %}">Sign Up</a>
-            <a href="{% url 'login' %}">Login</a>
+    <div class="pb-2 mt-2 bg-white">
+        <div class="container">
+            <!-- Social Media Links -->
+            <div class="row text-center p-5">
+                <div class="col-4">
+                    <a href="https://www.facebook.com/" 
+                       aria-label="View more about Tennis Booking System on Facebook" 
+                       rel="noopener" 
+                       target="_blank">
+                        <i class="fab fa-facebook fa-2x social-icons"></i>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="https://x.com/?lang=en" 
+                       aria-label="View more updates at Tennis Booking System on Twitter/X" 
+                       rel="noopener" 
+                       target="_blank">
+                        <i class="fab fa-twitter fa-2x social-icons"></i>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.instagram.com/" 
+                       aria-label="View more about the Tennis Booking System on Instagram" 
+                       rel="noopener" 
+                       target="_blank">
+                        <i class="fab fa-instagram fa-2x social-icons"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="footer-contact">
-            <p>Contact us: support@tennisbooking.com</p>
+        <!-- Copyright Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-green">
+                    <strong>
+                        <span id="footer-year"></span> Tennis Booking System. All rights reserved.
+                    </strong>
+                    <br />
+                    <small>Website Created By Ricardo Moreira</small>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
 
+<!-- JavaScript Block -->
 {% block scripts %}
-    <script>
-        // Example of dynamically setting the current year
-        const currentYear = new Date().getFullYear();
-        document.querySelector('.footer-content p').textContent = `© ${currentYear} Tennis Booking System. All rights reserved.`;
-    </script>
+<script>
+    // Dynamically update the year in the footer
+    document.getElementById('footer-year').textContent = `© ${new Date().getFullYear()}`;
+</script>
 {% endblock %}
