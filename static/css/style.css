@@ -3,37 +3,36 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    background-color: aqua;
   }
 
 /* Navbar background and link text color */
 .navbar {
-    background-color: #007bff; /* Blue background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #007bff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .navbar-brand {
-    color: white; /* White text for brand name */
+    color: white; 
     font-weight: bold;
 }
 
 .navbar-brand:hover {
-    color: #d9d9d9; /* Slightly lighter color on hover */
+    color: #d9d9d9;
 }
 
 /* Navbar links default styles */
 .nav-link {
-    color: white; /* White text for links */
-    transition: all 0.3s ease-in-out; /* Smooth transition */
+    color: white; 
+    transition: all 0.3s ease-in-out; 
 }
 
 /* Link hover and active styles */
 .nav-link:hover,
 .nav-link:focus {
-    color: black; /* Black text on hover */
-    background-color: white; /* White box effect */
-    border-radius: 5px; /* Rounded corners for the box */
-    padding: 5px 10px; /* Extra padding for better aesthetics */
+    color: black; 
+    background-color: white; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
 }
 
 /* Active link styling (if a page is currently active) */
@@ -46,12 +45,50 @@
 
 /* Navbar toggler button (for mobile view) */
 .navbar-toggler {
-    border: 1px solid white; /* White border */
+    border: 1px solid white; 
     color: white;
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+footer {
+    background-color: #007bff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.footertext {
+    color: rgb(243, 245, 243); 
+    padding-bottom: 20px;
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+.social-icons {
+    color: white; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Hover state for social icons */
+.social-icons:hover {
+    background-color: transparent; 
+    color: rgb(5, 5, 0); 
+}
+
+/* Social media icons */
+.social-icon {
+    vertical-align: middle; 
+}
+
+/* Footer responsive adjustments */
+@media (max-width: 575.98px) {
+    .social-icon {
+        font-size: 1.5rem; 
+    }
 }
 
 /* Responsive navbar adjustments for mobile */
